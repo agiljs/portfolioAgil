@@ -74,17 +74,18 @@
         </h2>
 
         <p class="hero-description">
-          Saya adalah seorang Frontend Developer yang berfokus membangun website
-          modern, responsive, cepat, dan memiliki pengalaman pengguna yang baik.
+          "Antusias dalam dunia pengembangan web, siap menghadirkan solusi
+          digital melalui pembuatan aplikasi web yang interaktif, bersih, dan
+          fungsional."
         </p>
 
         <div class="hero-button">
           <a href="#portfolio" class="btn primary"> View Project </a>
 
           <a
-            href="https://drive.google.com/drive/folders/1DVPUu4ZX2za-4XbdI4_rRQULq5olfLGm?usp=drive_link"
-            class="btn secondary"
-            target="_blank"
+            href="./cv-agil-aldo.pdf"
+            download="CV-Agil-Aldo.pdf"
+            class="download-btn"
           >
             Download CV
           </a>
@@ -143,13 +144,16 @@
         </div>
 
         <div class="about-content">
-          <h3>Frontend Developer & UI Designer</h3>
+          <h3>FullStack Developer</h3>
 
           <p>
             Saya memiliki minat yang tinggi dalam pengembangan website modern
-            menggunakan HTML, CSS, JavaScript, dan framework terbaru. Saya
-            senang mempelajari teknologi baru serta membangun antarmuka yang
-            menarik dan responsif.
+            secara end-to-end. Berfokus pada pengembangan antarmuka yang
+            responsif menggunakan HTML, CSS, JavaScript, TypeScript, dan
+            ReactJS, serta mengelola backend dan database yang handal
+            menggunakan Node.js, ExpressJS, PostgreSQL, dan Prisma ORM. Saya
+            selalu antusias mempelajari teknologi baru dan siap menghadirkan
+            solusi web yang optimal.
           </p>
 
           <div class="about-info">
@@ -179,7 +183,16 @@
 
     <!-- ================= SKILLS ================= -->
 
-    <section class="skills" id="skills">
+    <section class="skills-section">
+      <h2 class="skills-title">Technical Skills</h2>
+      <div class="marquee-container" id="marqueeContainer">
+        <div class="marquee-track" id="marqueeTrack">
+          <!-- Item akan di-generate otomatis via TypeScript agar rapi dan seamless -->
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="skills" id="skills">
       <div class="section-title">
         <span>My Skills</span>
 
@@ -191,43 +204,33 @@
           <i class="bi bi-filetype-html"></i>
 
           <h3>HTML5</h3>
-
-          <div class="progress">
-            <div class="value html" data-width="95%"></div>
-          </div>
         </div>
 
         <div class="skill-card">
           <i class="bi bi-filetype-css"></i>
 
           <h3>CSS3</h3>
-
-          <div class="progress">
-            <div class="value css" data-width="90%"></div>
-          </div>
         </div>
 
         <div class="skill-card">
           <i class="bi bi-filetype-js"></i>
 
           <h3>JavaScript</h3>
+        </div>
 
-          <div class="progress">
-            <div class="value js" data-width="85%"></div>
-          </div>
+        <div class="skill-card">
+          <i class="bi bi-filetype-tailwind"></i>
+
+          <h3>TailwindCSS</h3>
         </div>
 
         <div class="skill-card">
           <i class="bi bi-bootstrap"></i>
 
-          <h3>Bootstrap</h3>
-
-          <div class="progress">
-            <div class="value bootstrap" data-width="90%"></div>
-          </div>
+          <h3>TailwindCSS</h3>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ================= SERVICES ================= -->
 
@@ -249,7 +252,7 @@
           </p>
         </div>
 
-        <div class="service-card">
+        <!-- <div class="service-card">
           <i class="bi bi-palette"></i>
 
           <h3>UI Design</h3>
@@ -258,7 +261,7 @@
             Mendesain tampilan website yang menarik dengan pengalaman pengguna
             terbaik.
           </p>
-        </div>
+        </div> -->
 
         <div class="service-card">
           <i class="bi bi-phone"></i>
@@ -272,7 +275,203 @@
 
     <!-- ================= PORTFOLIO ================= -->
 
-    <section class="portfolio" id="portfolio">
+    <section class="projects-section">
+      <div class="projects-grid">
+        <!-- 1. Expense Tracker -->
+        <div class="project-card">
+          <div>
+            <div class="project-image-container">
+              <img
+                src="img/projek 1.png"
+                alt="Expense Tracker"
+                class="project-image"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Expense Tracker</h3>
+              <p class="project-description">
+                Aplikasi pencatatan pengeluaran peribadi untuk membantu mengawal
+                dan memantau bajet harian dengan lebih teratur.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">TailwindCSS</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+            <!-- <div class="project-footer">
+              <a href="#" class="view-project-btn">View Project &rarr;</a>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- 2. MessageApp -->
+        <div class="project-card">
+          <div>
+            <div class="project-image-container">
+              <img
+                src="img/projek 2.png"
+                alt="MessageApp"
+                class="project-image"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">MessageApp</h3>
+              <p class="project-description">
+                Platform pengiriman mesej interaktif yang direka untuk
+                komunikasi pantas dengan paparan muka yang responsif.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">TailwindCSS</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+            <!-- <div class="project-footer">
+              <a href="#" class="view-project-btn">View Project &rarr;</a>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- 3. Data Nilai Siswa -->
+        <div class="project-card">
+          <div>
+            <div class="project-image-container">
+              <img
+                src="img/projek 3.png"
+                alt="Data Nilai Siswa"
+                class="project-image"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Data Nilai Siswa</h3>
+              <p class="project-description">
+                Sistem pengurusan rekod dan pencapaian akademik pelajar yang
+                dilengkapi fitur carian serta penapisan data berkesan.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">TailwindCSS</span>
+              <span class="tech-badge">TypeScript</span>
+            </div>
+            <!-- <div class="project-footer">
+              <a href="#" class="view-project-btn">View Project &rarr;</a>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- 4. MyWatchlist -->
+        <div class="project-card">
+          <div>
+            <div class="project-image-container">
+              <img
+                src="img/projek 4.png"
+                alt="MyWatchlist"
+                class="project-image"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">MyWatchlist</h3>
+              <p class="project-description">
+                Aplikasi penanda buku digital untuk menyusun senarai filem dan
+                siri TV kegemaran berdasarkan status tontonan.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">TailwindCSS</span>
+              <span class="tech-badge">ReactJs</span>
+              <span class="tech-badge">TypeScript</span>
+            </div>
+            <!-- <div class="project-footer">
+              <a href="#" class="view-project-btn">View Project &rarr;</a>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- 5. Laundrify -->
+        <div class="project-card">
+          <div>
+            <div class="project-image-container">
+              <img
+                src="img/projek 5.png"
+                alt="Laundrify"
+                class="project-image"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Laundrify</h3>
+              <p class="project-description">
+                Sistem pengurusan perkhidmatan dobi bersepadu (Full-Stack) untuk
+                memantau status pesanan dan aliran keuntungan secara langsung.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">TailwindCSS</span>
+              <span class="tech-badge">ReactJs</span>
+              <span class="tech-badge">ExpressJs</span>
+              <span class="tech-badge">NodeJs</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">Prisma</span>
+            </div>
+            <!-- <div class="project-footer">
+              <a href="#" class="view-project-btn">View Project &rarr;</a>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- 6. E-Commerce -->
+        <div class="project-card">
+          <div>
+            <div class="project-image-container">
+              <img
+                src="img/projek 6.png"
+                alt="E-Commerce"
+                class="project-image"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">E-Commerce</h3>
+              <p class="project-description">
+                Antaramuka kedai dalam talian moden (Frontend) yang memaparkan
+                katalog produk dinamik dan reka bentuk yang menawan.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">TailwindCSS</span>
+              <span class="tech-badge">ReactJs</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+            <!-- <div class="project-footer">
+              <a href="#" class="view-project-btn">View Project &rarr;</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="portfolio" id="portfolio">
       <div class="section-title">
         <span>Portfolio</span>
 
@@ -318,8 +517,44 @@
             <a href="#"> View Project </a>
           </div>
         </div>
+
+        <div class="project-card">
+          <img src="img/projek 4.png" alt="Project 3" />
+
+          <div class="project-content">
+            <h3>MyWatchlist</h3>
+
+            <p>Website pencatatan data dan nilai siswa.</p>
+
+            <a href="#"> View Project </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="img/projek 5.png" alt="Project 3" />
+
+          <div class="project-content">
+            <h3>Laundrify</h3>
+
+            <p>Website pencatatan data dan nilai siswa.</p>
+
+            <a href="#"> View Project </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="img/projek 6.png" alt="Project 3" />
+
+          <div class="project-content">
+            <h3>E-Commerce</h3>
+
+            <p>Website pencatatan data dan nilai siswa.</p>
+
+            <a href="#"> View Project </a>
+          </div>
+        </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ================= EXPERIENCE ================= -->
 
@@ -363,7 +598,7 @@
       </div>
     </section>
 
-    <!-- ================= STATISTICS ================= -->
+    <!-- ================= STATISTICS =================
 
     <section class="statistics">
       <div class="stat-box">
@@ -389,7 +624,7 @@
 
         <p>Passion</p>
       </div>
-    </section>
+    </section> -->
 
     <!-- ================= TESTIMONIAL ================= -->
 

@@ -17,6 +17,82 @@ window.addEventListener("load", () => {
   }, 500);
 });
 
+// project
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  link: string;
+}
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: "Expense Tracker",
+    description:
+      "Aplikasi pencatatan kewangan peribadi untuk memantau pengeluaran bulanan secara sistematik dan berkesan.",
+    image: "/images/projects/expense-tracker.png",
+    technologies: ["HTML", "CSS", "TailwindCSS", "JavaScript"],
+    link: "#",
+  },
+  {
+    id: 2,
+    title: "MessageApp",
+    description:
+      "Aplikasi penghantaran mesej interaktif dengan antaramuka responsif untuk komunikasi yang pantas dan mudah.",
+    image: "/images/projects/message-app.png",
+    technologies: ["HTML", "CSS", "TailwindCSS", "JavaScript"],
+    link: "#",
+  },
+  {
+    id: 3,
+    title: "Data Nilai Siswa",
+    description:
+      "Sistem pengurusan maklumat dan prestasi akademik pelajar yang tersusun dengan carian serta penapisan data.",
+    image: "/images/projects/data-nilai-siswa.png",
+    technologies: ["HTML", "CSS", "TailwindCSS", "TypeScript"],
+    link: "#",
+  },
+  {
+    id: 4,
+    title: "MyWatchlist",
+    description:
+      "Platform penanda koleksi filem dan siri TV kegemaran dengan kategori status tontonan yang fleksibel.",
+    image: "/images/projects/mywatchlist.png",
+    technologies: ["HTML", "CSS", "TailwindCSS", "ReactJs", "TypeScript"],
+    link: "#",
+  },
+  {
+    id: 5,
+    title: "Laundrify",
+    description:
+      "Aplikasi pengurusan perkhidmatan dobi Full-Stack untuk memantau pesanan, pendapatan, dan transaksi pelanggan secara real-time.",
+    image: "/images/projects/laundrify.png",
+    technologies: [
+      "HTML",
+      "CSS",
+      "TailwindCSS",
+      "ReactJs",
+      "ExpressJs",
+      "NodeJs",
+      "PostgreSQL",
+      "Prisma",
+    ],
+    link: "#",
+  },
+  {
+    id: 6,
+    title: "E-Commerce",
+    description:
+      "Tampilan antaramuka kedai dalam talian moden dengan katalog produk, susunan responsif, dan animasi pengguna yang menarik.",
+    image: "/images/projects/ecommerce.png",
+    technologies: ["HTML", "CSS", "TailwindCSS", "ReactJs", "JavaScript"],
+    link: "#",
+  },
+];
+
 // ==============================
 // MOBILE MENU
 // ==============================
@@ -179,6 +255,70 @@ darkButton?.addEventListener("click", () => {
   }
 });
 
+// skills
+interface Skill {
+  name: string;
+  icon: string;
+}
+
+const skills: Skill[] = [
+  {
+    name: "HTML5",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    name: "CSS3",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    name: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "ReactJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "ExpressJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "Prisma",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+  },
+];
+
+function renderSkillsMarquee(): void {
+  const track = document.getElementById("marqueeTrack");
+  if (!track) return;
+
+  // Duplikasi array skill agar pergerakan looping mulus tanpa patah-patah
+  const duplicatedSkills = [...skills, ...skills];
+
+  // Buat elemen HTML menggunakan TypeScript secara dinamis
+  track.innerHTML = duplicatedSkills
+    .map(
+      (skill) => `
+      <div class="skill-card">
+        <img src="${skill.icon}" alt="${skill.name}" class="skill-icon" />
+        <span class="skill-name">${skill.name}</span>
+      </div>
+    `,
+    )
+    .join("");
+}
+
+// Jalankan fungsi saat DOM selesai dimuat
+document.addEventListener("DOMContentLoaded", renderSkillsMarquee);
+
 // ==============================
 // TYPING ANIMATION
 // ==============================
@@ -186,9 +326,8 @@ darkButton?.addEventListener("click", () => {
 const typingElement = document.getElementById("typing");
 
 const words: string[] = [
-  "Frontend Developer",
+  "FullStack Developer",
   "Web Developer",
-  "UI Designer",
   "JavaScript Developer",
 ];
 

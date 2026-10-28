@@ -145,6 +145,58 @@ darkButton?.addEventListener("click", () => {
         darkButton.innerHTML = '<i class="bi bi-moon-stars"></i>';
     }
 });
+const skills = [
+    {
+        name: "HTML5",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    },
+    {
+        name: "CSS3",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    },
+    {
+        name: "JavaScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    },
+    {
+        name: "TypeScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    },
+    {
+        name: "ReactJS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+        name: "ExpressJS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    },
+    {
+        name: "PostgreSQL",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    },
+    {
+        name: "Prisma",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+    },
+];
+function renderSkillsMarquee() {
+    const track = document.getElementById("marqueeTrack");
+    if (!track)
+        return;
+    // Duplikasi array skill agar pergerakan looping mulus tanpa patah-patah
+    const duplicatedSkills = [...skills, ...skills];
+    // Buat elemen HTML menggunakan TypeScript secara dinamis
+    track.innerHTML = duplicatedSkills
+        .map((skill) => `
+      <div class="skill-card">
+        <img src="${skill.icon}" alt="${skill.name}" class="skill-icon" />
+        <span class="skill-name">${skill.name}</span>
+      </div>
+    `)
+        .join("");
+}
+// Jalankan fungsi saat DOM selesai dimuat
+document.addEventListener("DOMContentLoaded", renderSkillsMarquee);
 // ==============================
 // TYPING ANIMATION
 // ==============================

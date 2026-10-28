@@ -558,7 +558,100 @@ ABOUT
 SKILLS
 ======================================*/
 
-.skill-container {
+.skills-section {
+  background-color: #0d1117;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0)
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.marquee-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollLeft 25s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.skill-card {
+  width: 200px;
+  height: 160px;
+  background-color: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #6366f1;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e6edf3;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* .skill-container {
   display: grid;
 
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -644,7 +737,7 @@ SKILLS
   from {
     width: 0;
   }
-}
+} */
 
 /*======================================
 SERVICES
@@ -1485,6 +1578,115 @@ body.light textarea {
   background: #f1f5f9;
 
   color: #0f172a;
+}
+
+/* project */
+/* Container Utama Grid Proyek */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 40px 20px;
+  background-color: #0d1117;
+}
+
+/* Desain Kartu Proyek */
+.project-card {
+  background-color: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #8b5cf6;
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
+}
+
+/* Gambar Proyek */
+.project-image-container {
+  height: 200px;
+  overflow: hidden;
+  background-color: #21262d;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Konten Teks */
+.project-content {
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-family: "Inter", sans-serif;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: #8b949e;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Bagian Teknologi (Badge) */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 20px 20px 20px;
+}
+
+.tech-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Tombol View Project */
+.project-footer {
+  padding: 0 20px 20px 20px;
+}
+
+.view-project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #a78bfa;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.view-project-btn:hover {
+  color: #c4b5fd;
 }
 
 /*======================================
