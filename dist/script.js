@@ -1,4 +1,3 @@
-"use strict";
 // =====================================================
 // TypeScript version (fully typed)
 // =====================================================
@@ -14,6 +13,65 @@ window.addEventListener("load", () => {
         preloader.style.display = "none";
     }, 500);
 });
+export const projects = [
+    {
+        id: 1,
+        title: "Expense Tracker",
+        description: "Aplikasi pencatatan kewangan peribadi untuk memantau pengeluaran bulanan secara sistematik dan berkesan.",
+        image: "/images/projects/expense-tracker.png",
+        technologies: ["HTML", "CSS", "TailwindCSS", "JavaScript"],
+        link: "#",
+    },
+    {
+        id: 2,
+        title: "MessageApp",
+        description: "Aplikasi penghantaran mesej interaktif dengan antaramuka responsif untuk komunikasi yang pantas dan mudah.",
+        image: "/images/projects/message-app.png",
+        technologies: ["HTML", "CSS", "TailwindCSS", "JavaScript"],
+        link: "#",
+    },
+    {
+        id: 3,
+        title: "Data Nilai Siswa",
+        description: "Sistem pengurusan maklumat dan prestasi akademik pelajar yang tersusun dengan carian serta penapisan data.",
+        image: "/images/projects/data-nilai-siswa.png",
+        technologies: ["HTML", "CSS", "TailwindCSS", "TypeScript"],
+        link: "#",
+    },
+    {
+        id: 4,
+        title: "MyWatchlist",
+        description: "Platform penanda koleksi filem dan siri TV kegemaran dengan kategori status tontonan yang fleksibel.",
+        image: "/images/projects/mywatchlist.png",
+        technologies: ["HTML", "CSS", "TailwindCSS", "ReactJs", "TypeScript"],
+        link: "#",
+    },
+    {
+        id: 5,
+        title: "Laundrify",
+        description: "Aplikasi pengurusan perkhidmatan dobi Full-Stack untuk memantau pesanan, pendapatan, dan transaksi pelanggan secara real-time.",
+        image: "/images/projects/laundrify.png",
+        technologies: [
+            "HTML",
+            "CSS",
+            "TailwindCSS",
+            "ReactJs",
+            "ExpressJs",
+            "NodeJs",
+            "PostgreSQL",
+            "Prisma",
+        ],
+        link: "#",
+    },
+    {
+        id: 6,
+        title: "E-Commerce",
+        description: "Tampilan antaramuka kedai dalam talian moden dengan katalog produk, susunan responsif, dan animasi pengguna yang menarik.",
+        image: "/images/projects/ecommerce.png",
+        technologies: ["HTML", "CSS", "TailwindCSS", "ReactJs", "JavaScript"],
+        link: "#",
+    },
+];
 // ==============================
 // MOBILE MENU
 // ==============================
@@ -202,9 +260,8 @@ document.addEventListener("DOMContentLoaded", renderSkillsMarquee);
 // ==============================
 const typingElement = document.getElementById("typing");
 const words = [
-    "Frontend Developer",
+    "FullStack Developer",
     "Web Developer",
-    "UI Designer",
     "JavaScript Developer",
 ];
 let wordIndex = 0;
